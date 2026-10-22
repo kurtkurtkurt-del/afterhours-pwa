@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <!-- viewport-fit=cover: draw under the notch; the app pads itself with safe-area insets. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>afterhours</title>
+    <!-- Added to the home screen on iPhone, the PWA opens full screen. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="afterhours" />
+    <!-- tools/publish-pwa.sh prefixes these paths with the base URL. -->
+    <link rel="manifest" href="/afterhours-pwa/manifest.json" />
+    <link rel="apple-touch-icon" href="/afterhours-pwa/apple-touch-icon.png" />
+    <meta name="theme-color" content="#0e0d0c" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- iPhone start-up images, one per screen size (tools/build-icons.py draws them): without
+         them iOS shows a white screen while a home-screen app loads. -->
+    <link rel="apple-touch-startup-image" href="/afterhours-pwa/splash/440x956@3.png" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/afterhours-pwa/splash/402x874@3.png" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/afterhours-pwa/splash/430x932@3.png" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/afterhours-pwa/splash/393x852@3.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/afterhours-pwa/splash/428x926@3.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/afterhours-pwa/splash/390x844@3.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/afterhours-pwa/splash/375x812@3.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/afterhours-pwa/splash/414x896@3.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/afterhours-pwa/splash/414x896@2.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/afterhours-pwa/splash/414x736@3.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/afterhours-pwa/splash/375x667@2.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="/afterhours-pwa/splash/320x568@2.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
+    <!-- The react-native-web recommended reset, on the app's dark background, plus what
+         Safari on iPhone needs to feel like an app: no grey flash on a tap, no copy bubble
+         on a long press, no text zoom when the phone turns, no 300 ms tap wait, no rubber
+         band at the edges; the page is pinned to the screen (the small-viewport height,
+         so the URL bar does not leave a gap) and only the app's own lists scroll. -->
+    <style id="expo-reset">
+      html,
+      body {
+        height: 100%;
+        background: #0e0d0c;
+        overscroll-behavior: none;
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        touch-action: manipulation;
+      }
+      body {
+        position: fixed;
+        inset: 0;
+        height: 100svh;
+        overflow: hidden;
+        margin: 0;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      input,
+      textarea,
+      [contenteditable] {
+        -webkit-user-select: text;
+        user-select: text;
+      }
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <meta name="theme-color" content="#0E0D0C">
+<meta name="description" content="find your night. one card at a time.">
+<link rel="icon" href="/afterhours-pwa/favicon.ico"/></head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  <script src="/afterhours-pwa/_expo/static/js/web/entry-94b9676779358bc6306304277925d0f5.js" defer></script>
+</body>
+</html>
